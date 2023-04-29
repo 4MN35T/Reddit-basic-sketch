@@ -11,7 +11,7 @@ const AddNewPost = ({
     const click = () => {
         if (postTitle !== '') {
             const posts = {
-                id: id,
+                id: id++,
                 postedBy: user.name,
                 postText: postTitle,
                 upVotes: 0,

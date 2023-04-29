@@ -16,7 +16,7 @@ const Navbar = () => {
                 postList[i].upVotes = 1;
             }
         }
-
+        window.location.reload();
         localStorage.setItem('postlist', JSON.stringify(postList));
     };
     const downVotes = (postId) => {
@@ -25,6 +25,7 @@ const Navbar = () => {
                 postList[i].downVotes = 1;
             }
         }
+        window.location.reload();
         localStorage.setItem('postlist', JSON.stringify(postList));
     };
 
