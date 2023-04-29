@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  padding: 10px 10%;
+  background: lightgrey;
+  z-index: 1;
+}
+
+.container {
+  text-align: end;
+  padding: 0px 15%;
+}
+
+.addnew {
+  justify-content: flex-end;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.addnew button {
+  color: #fff;
+  background-color: #2b75c6;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.postcontent {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.box {
+  background-color: lightgrey;
+  padding: 4px;
+  width: 100%;
+}
+
+.votecontent {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.votecontent button{
+  border: none;
+}
+
+.uparrow,
+.downarrow {
+  display: inline-flex;
+  appearance: none;
+
+  align-items: center;
+
+  justify-content: center;
+  transition: all 250ms ease 0s;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  width: auto;
+  line-height: 1.2;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  height: 3rem;
+  min-width: 3rem;
+  font-size: 1.125rem;
+
+  color: rgb(255, 255, 255);
+  padding: 0px;
+}
+
+.uparrow {
+  background: rgb(128, 90, 213);
+}
+.downarrow {
+  background-color: #e8c142;
+}
+
+.text-comment {
+  background: rgb(237, 242, 247);
+  border-radius: 0.25rem;
+  width: 100%;
+
+  min-width: 3rem;
+  margin-top: 0.5rem;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.box {
+  background: rgb(237, 242, 247);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-left: 0.5rem;
+  margin-top: 9px;
+}
+
+.postContainer {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.48);
+
+  z-index: 1300;
+
+  overflow: auto;
+}
+
+.modalBody {
+  background: #fff;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  /* height: 30vh; */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.heading{
+  padding: 0.5rem 0rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+ 
+.modalBody textarea{
+  width: 90%;
+    outline: 0px;
+    position: relative;
+    appearance: none;
+    transition: all 0.2s ease 0s;
+    padding: 8px 1rem;
+    min-height: 80px;
+    line-height: 1.375;
+    font-size: 1rem;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    outline: none;
+    border: 1px solid lightgrey;
+}
+  .modalBody button{
+  margin-bottom: 15px;
+  /* margin-top: 20px; */
+}
+ 
+
+.button-group{
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+.button-group button{
+  margin: 15px 15px;
+  color: #fff;
+  background-color: #2b75c6;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.button-group button:first-child{
+   color: black;
+  background: rgb(237, 242, 247);
+}
+
+
+.login-container{
+  font-size: 20px;;
+  padding: 10px 30px 10px;
+  border-bottom: 1px solid lightgrey;
+  }
+  
+  .login-container img{
+    width: 15px;
+  }
+  
+  .login-welcome{
+  text-align: center;
+  margin-top: 30px;
+  }
+  
+  .login-text{
+  text-align: center;
+  }
+  
+  .login-heading{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(15, 78, 149);
+    margin-bottom: 20px;
+  }
+  
+  .login-content{
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgb(87, 132, 216);
+    padding: 20px;
+    width: 30vw;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+    .form-input input{
+      height: 35px;
+      width: 100%;
+      margin: 6px 0;
+      padding: 0 5px;
+      border-radius: 5px;
+  }
+  
+  .form-button button{
+    width: 100%;
+    margin-top: 20px;
+  }
