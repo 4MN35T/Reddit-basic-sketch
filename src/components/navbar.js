@@ -27,7 +27,7 @@ const Navbar = () => {
         window.location.reload();
         localStorage.setItem('postlist', JSON.stringify(postList));
     };
-
+    const logout = () => {localStorage.clear(); window.location.reload();}
     return (
         <>
             <div className="navbar">
@@ -37,6 +37,7 @@ const Navbar = () => {
                             {' '}
                             Add new post
                         </button>
+                    <button style={{marginLeft:"20px"}} onClick={()=> logout()}>logout</button>
                     </div>
                 </div>
             </div>
