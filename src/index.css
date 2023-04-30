@@ -81,9 +81,12 @@ body {
 
 .uparrow {
   background: rgb(128, 90, 213);
+  cursor: pointer;
 }
 .downarrow {
+  color: black;
   background-color: #e8c142;
+  cursor: pointer;
 }
 
 .text-comment {
@@ -169,6 +172,9 @@ body {
 }
   .modalBody button{
   margin-bottom: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
   /* margin-top: 20px; */
 }
  
@@ -196,6 +202,7 @@ body {
 
   color: rgb(255, 255, 255);
   padding: 0px;
+  cursor: not-allowed;
 }
 
 .button-group{

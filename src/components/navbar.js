@@ -57,7 +57,7 @@ const Navbar = () => {
                 <>
                     <div className="postContainer">
                         <div className="postcontent">
-                            <div className="box">vhgsj jhkjk jhjk hjhjhjk</div>
+                            <div className="box">Before you explore the platform, click&nbsp;<a href="https://scribehow.com/shared/How_to_use_this_platform__72AgOTEKQ-yXa4bWRw2j7g" target='blank'>here</a>.</div>
                         </div>
                     </div>
                 </>

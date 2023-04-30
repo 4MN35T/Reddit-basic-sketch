@@ -32,7 +32,7 @@ const AddNewPost = ({
             <div className="modalBody">
                 <div className="heading">
                     Add New post
-                    <button onClick={() =>{  setPostTitle(''); closeModal(false);}}>&#x2613;</button>
+                    <button onClick={() =>{  setPostTitle(''); closeModal(false);}}>x</button>
                 </div>
                 <textarea
                     className="post-title"
