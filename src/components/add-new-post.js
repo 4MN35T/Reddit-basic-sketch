@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-let id = 0;
+import { v4 as uuidv4 } from 'uuid';
+
 const AddNewPost = ({
     closeModal,
     postTitle,
@@ -11,28 +12,27 @@ const AddNewPost = ({
     const click = () => {
         if (postTitle !== '') {
             const posts = {
-                id: id++,
+                id: uuidv4(),
                 postedBy: user.name,
                 postText: postTitle,
                 upVotes: 0,
                 downVotes: 0,
             };
-            setPostList([...postList, posts]);
-            localStorage.setItem(
-                'postlist',
-                JSON.stringify([...postList, posts])
-            );
+            const newPostList = [...postList, posts].reverse();
+
+            setPostList(newPostList);
+            localStorage.setItem('postlist', JSON.stringify(newPostList));
             setPostTitle('');
             closeModal(false);
         }
     };
-    console.log(postTitle, postList);
+    console.log(postList);
     return (
         <div className="modal">
             <div className="modalBody">
                 <div className="heading">
                     Add New post
-                    <button onClick={() => closeModal(false)}>&#x2613;</button>
+                    <button onClick={() =>{  setPostTitle(''); closeModal(false);}}>&#x2613;</button>
                 </div>
                 <textarea
                     className="post-title"
@@ -44,8 +44,8 @@ const AddNewPost = ({
                 />
 
                 <div className="button-group">
-                    <button onClick={() => closeModal(false)}>close</button>
-                    <button onClick={click}>Save</button>
+                    <button onClick={() =>{  setPostTitle(''); closeModal(false);}}>cancel</button>
+                    <button onClick={click}>post</button>
                 </div>
             </div>
         </div>

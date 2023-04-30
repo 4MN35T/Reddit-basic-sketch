@@ -172,6 +172,31 @@ body {
   /* margin-top: 20px; */
 }
  
+.disabled{
+  background-color: rgb(190, 211, 190);
+  color: rgb(146, 158, 146);
+  display: inline-flex;
+  appearance: none;
+
+  align-items: center;
+
+  justify-content: center;
+  transition: all 250ms ease 0s;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  width: auto;
+  line-height: 1.2;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  height: 3rem;
+  min-width: 3rem;
+  font-size: 1.125rem;
+
+  color: rgb(255, 255, 255);
+  padding: 0px;
+}
 
 .button-group{
   display: flex;

@@ -1,27 +1,25 @@
 import React, { useEffect, useState } from 'react';
 
 const VoteButtons = ({ vote, upVotes, downVotes }) => {
-    // console.log(vote.upVotes);
-    const vot = JSON.parse(localStorage.getItem("postlist")) || [];
     return (
         <>
-            <div className="votecontent">
-                <button className="uparrow" onClick={() => upVotes(vote.id)} disabled={vot[vote.id].upVotes === true ? true : false}
-                >
-                    {' '}
+            <div className={'votecontent'}>
+                <button
+                    className={vote.upVotes === 0 ? 'uparrow' : 'disabled'}
+                    onClick={() => upVotes(vote.id)}
+                    disabled={vote.upVotes === 1 ? true : false}>
                     &#x2191;
                 </button>
-                <span className="text-comment">{vot[vote.id].upVotes === true ? 1 : 0}</span>
+                <span className={'text-comment '}>{vote.upVotes}</span>
             </div>
-            <div className="votecontent">
+            <div className={'votecontent'}>
                 <button
-                    className="downarrow"
-                    onClick={() => downVotes(vote.id)} disabled={vot[vote.id].downVotes === true ? true : false}
-                    >
-                    {' '}
+                    className={vote.downVotes === 0 ? 'downarrow' : 'disabled'}
+                    onClick={() => downVotes(vote.id)}
+                    disabled={vote.downVotes === 1 ? true : false}>
                     &#x2193;
                 </button>
-                <span className="text-comment">{vot[vote.id].downVotes === true ? 1 : 0}</span>
+                <span className={'text-comment'}>{vote.downVotes}</span>
             </div>
         </>
     );

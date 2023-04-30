@@ -13,6 +13,7 @@ const Post = ({ list, upVotes, downVotes }) => {
                                 vote={post}
                                 upVotes={upVotes}
                                 downVotes={downVotes}
+                                id={post.id}
                             />
                             <div className="box">{post.postText}</div>
                         </div>

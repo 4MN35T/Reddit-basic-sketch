@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import AddNewPost from './add-new-post';
 import Post from './post';
-// import AddNewPost from "./add-new-post";
 
 const Navbar = () => {
     const [openPost, setOpenPost] = useState(false);
@@ -41,6 +40,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+
             {openPost && (
                 <AddNewPost
                     closeModal={setOpenPost}
@@ -50,8 +50,16 @@ const Navbar = () => {
                     setPostTitle={setPostTitle}
                 />
             )}
-            {postList.length > 0 && (
+            {postList.length > 0 ? (
                 <Post list={postList} upVotes={upVotes} downVotes={downVotes} />
+            ) : (
+                <>
+                    <div className="postContainer">
+                        <div className="postcontent">
+                            <div className="box">vhgsj jhkjk jhjk hjhjhjk</div>
+                        </div>
+                    </div>
+                </>
             )}
         </>
     );
