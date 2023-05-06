@@ -17,6 +17,7 @@ const AddNewPost = ({
                 postText: postTitle,
                 upVotes: 0,
                 downVotes: 0,
+                disable: false
             };
             const newPostList = [...postList, posts].reverse();
 

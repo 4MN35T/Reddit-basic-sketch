@@ -13,6 +13,7 @@ const Navbar = () => {
         for (let i = 0; i < postList.length; i++) {
             if (postList[i].id === postId) {
                 postList[i].upVotes = 1;
+                postList[i].disable = true;
             }
         }
         window.location.reload();
@@ -22,6 +23,7 @@ const Navbar = () => {
         for (let i = 0; i < postList.length; i++) {
             if (postList[i].id === postId) {
                 postList[i].downVotes = 1;
+                postList[i].disable = true;
             }
         }
         window.location.reload();

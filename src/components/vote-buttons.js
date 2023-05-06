@@ -5,18 +5,18 @@ const VoteButtons = ({ vote, upVotes, downVotes }) => {
         <>
             <div className={'votecontent'}>
                 <button
-                    className={vote.upVotes === 0 ? 'uparrow' : 'disabled'}
+                    className={vote.disable === false ? 'uparrow' : 'disabled'}
                     onClick={() => upVotes(vote.id)}
-                    disabled={vote.upVotes === 1 ? true : false}>
+                    disabled={vote.disable}>
                     &#x2191;
                 </button>
                 <span className={'text-comment '}>{vote.upVotes}</span>
             </div>
             <div className={'votecontent'}>
                 <button
-                    className={vote.downVotes === 0 ? 'downarrow' : 'disabled'}
+                    className={vote.disable === false ? 'downarrow' : 'disabled'}
                     onClick={() => downVotes(vote.id)}
-                    disabled={vote.downVotes === 1 ? true : false}>
+                    disabled={vote.disable}>
                     &#x2193;
                 </button>
                 <span className={'text-comment'}>{vote.downVotes}</span>
